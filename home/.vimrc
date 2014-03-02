@@ -1,20 +1,20 @@
 " plugin
-source ~/dotfiles/.vimrc.neobundle
+source ~/.vimrc.neobundle
 
 " indent
-source ~/dotfiles/.vimrc.indent
+source ~/.vimrc.indent
 " neocomplcache
-source ~/dotfiles/.vimrc.neocomplcache
+source ~/.vimrc.neocomplcache
 " neosnippet
-source ~/dotfiles/.vimrc.neosnippet
+source ~/.vimrc.neosnippet
 " colorscheme
-source ~/dotfiles/.vimrc.colorscheme
+source ~/.vimrc.colorscheme
 " statusline
-source ~/dotfiles/.vimrc.statusline
+source ~/.vimrc.statusline
 " goshrepl
-source ~/dotfiles/.vimrc.goshrepl
+source ~/.vimrc.goshrepl
 " gist
-source ~/dotfiles/.vimrc.gist
+source ~/.vimrc.gist
 
 set noswapfile
 set nobackup
