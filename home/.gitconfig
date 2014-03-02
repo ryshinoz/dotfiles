@@ -1,0 +1,13 @@
+[user]
+	name = Ryosuke Shinozaki
+	email = ryshinoz@gmail.com
+[http]
+	sslVerify = true
+[core]
+	editor = vim
+[github]
+	user = ryshinoz
+[alias]
+    tree = log --graph --all --format=\"%x09%C(green bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
+[push]
+	default = current

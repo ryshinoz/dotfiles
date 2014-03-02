@@ -1,0 +1,22 @@
+" 改行した時のインデントを現在の行と同じにする
+set autoindent
+" 高度なインデントを実施する
+set smartindent
+" TAB入力された時に空白を挿入する 
+set expandtab
+" ファイル内のTABを指定した空白数で表示する (ts)
+set tabstop=4
+" インデントに利用される空白数 (sw)
+set shiftwidth=4
+" TAB入力された時の空白数、0にしておくとtabstopの設定が利用される (sts)
+set softtabstop=4
+
+augroup SetFileTypeIndent
+    autocmd!
+    autocmd FileType sh   setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType vim  setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType php  setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType ruby setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType xml  setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType yaml setlocal ts=2 sw=2 sts=2 et
+augroup END

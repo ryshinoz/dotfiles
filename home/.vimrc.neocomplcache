@@ -1,0 +1,64 @@
+" 起動
+let g:neocomplcache_enable_at_startup = 1
+" ポップアップメニューを20個にする
+let g:neocomplcache_max_list = 20
+" 補完候補の1個目を選択状態にする
+let g:neocomplcache_enable_auto_select = 1
+" 補完が自動で開始される文字数
+let g:neocomplcache_auto_completion_start_length = 3
+" 大文字、小文字を区別して補完 
+let g:neocomplcache_enable_smart_case = 1
+" アンダーバー区切り補完を有効にする
+let g:neocomplcache_enable_underbar_completion = 1
+" 大文字を区切り文字として補完 
+let g:neocomplcache_enable_camel_case_completion = 1
+" バッファ、辞書ファイルの補完候補となるキーワードの長さ
+let g:neocomplcache_min_keyword_length = 4
+" シンタックスファイルの補完候補となるキーワードの長さ
+let g:neocomplcache_min_syntax_length = 4
+" 補完候補のキーワードパターン
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+" 日本語を補完候補として利用しないようにする
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+" Gosh REPL
+let g:neocomplcache_keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
+" 区切り文字パターン
+if !exists('g:neocomplcache_delimiter_patterns')
+    let g:neocomplcache_delimiter_patterns = {}
+endif
+" PHP -> :: \
+let g:neocomplcache_delimiter_patterns['php'] = ['->', '::', '\']
+
+"ディクショナリ補完
+""ファイルタイプごとの辞書ファイルの場所
+let g:neocomplcache_dictionary_filetype_lists = {
+  \ 'default' : '',
+  \ 'php' : $HOME . '/.vim/dict/php.dict',
+  \ }
+
+" rsense
+let g:rsenseHome = '/usr/local/Cellar/rsense/0.3/libexec'
+let g:rsenseUseOmniFunc = 1
+" rubyの設定
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby       = '[^. *\t]\.\w*\|\h\w*::'
+
+" キーマップ
+" 補完候補があれば確定、なければ改行 
+inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "<CR>"
+" TABで補完
+inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
+" Shift-TABで補完（逆）
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+" 補完キャンセルして元に戻す
+inoremap <expr><C-g>    neocomplcache#undo_completion()

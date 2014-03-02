@@ -1,0 +1,6 @@
+" 常にステータスラインを表示する
+set laststatus=2
+
+" powerline
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = &background == 'light' ? 'solarized' : 'solarized256'
