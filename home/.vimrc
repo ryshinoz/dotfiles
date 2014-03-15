@@ -15,6 +15,8 @@ source ~/.vimrc.statusline
 source ~/.vimrc.goshrepl
 " gist
 source ~/.vimrc.gist
+" kobito
+source ~/dotfiles/.vimrc.kobito
 
 set noswapfile
 set nobackup
@@ -53,3 +55,16 @@ endif
 
 " Vim motions
 let g:EasyMotion_leader_key = "'"
+" Vim Over
+let mapleader = ","
+nnoremap <silent> <Leader>m :OverCommandLine<CR>%s/
+
+command! -nargs=? Jq call s:Jq(<f-args>)
+function! s:Jq(...)
+    if 0 == a:0
+        let l:arg = "."
+    else
+        let l:arg = a:1
+    endif
+    execute "%! jq \"" . l:arg . "\""
+endfunction

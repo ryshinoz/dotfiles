@@ -9,5 +9,6 @@
 	user = ryshinoz
 [alias]
     tree = log --graph --all --format=\"%x09%C(green bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
+    fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 [push]
-	default = current
+	default = simple
