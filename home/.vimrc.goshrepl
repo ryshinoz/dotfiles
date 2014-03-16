@@ -1,4 +1,0 @@
-" REPLバッファを垂直方向に開いた時の横幅
-let g:gosh_buffer_width = 30
-" REPLバッファを水平方向に開いた時の縦幅
-let g:gosh_buffer_height = 20

@@ -11,12 +11,10 @@ source ~/.vimrc.neosnippet
 source ~/.vimrc.colorscheme
 " statusline
 source ~/.vimrc.statusline
-" goshrepl
-source ~/.vimrc.goshrepl
 " gist
 source ~/.vimrc.gist
 " kobito
-source ~/dotfiles/.vimrc.kobito
+source ~/.vimrc.kobito
 
 set noswapfile
 set nobackup
