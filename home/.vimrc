@@ -66,3 +66,5 @@ function! s:Jq(...)
     endif
     execute "%! jq \"" . l:arg . "\""
 endfunction
+
+set noundofile
