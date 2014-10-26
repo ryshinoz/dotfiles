@@ -11,7 +11,6 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -22,15 +21,12 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'YankRing.vim'
-NeoBundle 'nginx.vim'
 NeoBundle 'ryshinoz/solrconfig.vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'rizzatti/funcoo.vim'
-NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'rking/ag.vim'
 
 " colorscheme
