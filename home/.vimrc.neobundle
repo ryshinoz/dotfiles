@@ -28,6 +28,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'tpope/vim-markdown'
 
 " colorscheme
 NeoBundle 'desert256.vim'
