@@ -12,3 +12,5 @@
     fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 [push]
 	default = simple
+[ghq]
+	root = ~/src
