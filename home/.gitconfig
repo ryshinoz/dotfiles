@@ -5,6 +5,7 @@
 	sslVerify = true
 [core]
 	editor = vim
+	excludesfile = /Users/usr0200343/.gitignore.global
 [github]
 	user = ryshinoz
 [alias]
