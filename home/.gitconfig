@@ -1,6 +1,7 @@
 [user]
 	name = Ryosuke Shinozaki
 	email = ryshinoz@gmail.com
+	signingkey = 993DACEE
 [http]
 	sslVerify = true
 [core]
@@ -15,3 +16,7 @@
 	default = simple
 [ghq]
 	root = ~/src
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
